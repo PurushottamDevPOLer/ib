@@ -1,0 +1,28 @@
+export const menuData = {
+    menuItems: [
+        "Vadapav",
+        "Dryfruits Kharwas",
+        "Masala Taak",
+        "Tea",
+        "Hot Coffee",
+        "Mocha Frappé",
+        "Chocolate Shake",
+        "Strawberry Shake",
+        "Virgin Mojito",
+        "Strawberry Chocolate",
+        "Water Bottle",
+    ],
+    menuItemsPrice: [
+        "25",
+        "40",
+        "20",
+        "15",
+        "25",
+        "60",
+        "50",
+        "90",
+        "70",
+        "130",
+        "20",
+    ],
+}

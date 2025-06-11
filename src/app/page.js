@@ -1,10 +1,11 @@
-
-import Image from "next/image";
+import Footer from "@/maincomponents/Footer";
+import Hero from "@/maincomponents/Hero";
 
 export default function Home() {
   return (
     <>
-    <h1>Hi</h1>
+      <Hero />
+      <Footer />
     </>
   );
 }

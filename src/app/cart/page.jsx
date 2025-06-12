@@ -1,0 +1,143 @@
+'use client';
+
+import { useCartStore } from '@/store/cartStore';
+import { useState } from 'react';
+
+export default function CartPage() {
+  const cart = useCartStore((state) => state.cart);
+  const updateQuantity = useCartStore((state) => state.updateQuantity);
+  const [phone, setPhone] = useState('');
+  const [otpSent, setOtpSent] = useState(false);
+  const [otp, setOtp] = useState('');
+  const [verified, setVerified] = useState(false);
+
+  const handleQuantityChange = (id, delta) => {
+    const item = cart.find((i) => i.id === id);
+    if (!item) return;
+    const newQty = Math.max(1, item.quantity + delta);
+    updateQuantity(id, newQty);
+  };
+
+  const totalAmount = cart.reduce(
+    (total, item) => total + item.price * item.quantity,
+    0
+  );
+
+  const handleSendOtp = () => {
+    if (phone.length !== 10) {
+      alert('Enter valid 10-digit number');
+      return;
+    }
+    setOtpSent(true);
+    alert(`OTP sent to ${phone} (mocked)`);
+  };
+
+  const handleVerifyOtp = () => {
+    if (otp === '123456') {
+      setVerified(true);
+      alert('OTP Verified!');
+    } else {
+      alert('Invalid OTP');
+    }
+  };
+
+  const handlePlaceOrder = () => {
+    if (!verified) {
+      alert('Please verify OTP first');
+      return;
+    }
+    alert('Redirecting to payment gateway...');
+  };
+
+  return (
+    <div className="min-h-screen p-6 bg-gradient-to-br from-yellow-100 to-orange-100">
+      <div className="max-w-3xl mx-auto bg-white rounded-xl shadow-md p-6">
+        <h2 className="text-2xl font-bold mb-4 text-center">Your Cart</h2>
+
+        {cart.length === 0 ? (
+          <p className="text-gray-500 text-center">Your cart is empty.</p>
+        ) : (
+          <>
+            <ul className="divide-y divide-gray-200">
+              {cart.map((item) => (
+                <li key={item.id} className="py-4 flex items-center justify-between">
+                  <div>
+                    <p className="font-semibold">{item.name}</p>
+                    <p className="text-sm text-gray-600">
+                      ₹{item.price} × {item.quantity || 1}
+                    </p>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <button
+                      onClick={() => handleQuantityChange(item.id, -1)}
+                      className="px-2 py-1 bg-gray-200 rounded"
+                    >
+                      -
+                    </button>
+                    <span>{item.quantity || 1}</span>
+                    <button
+                      onClick={() => handleQuantityChange(item.id, 1)}
+                      className="px-2 py-1 bg-gray-200 rounded"
+                    >
+                      +
+                    </button>
+                  </div>
+                </li>
+              ))}
+            </ul>
+
+            <div className="mt-6 border-t pt-4">
+              <p className="text-lg font-bold text-right">Total: ₹{totalAmount}</p>
+            </div>
+
+            <div className="mt-6 space-y-4">
+              <input
+                type="tel"
+                placeholder="Enter phone number"
+                className="w-full p-2 border rounded"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+              />
+
+              {!otpSent && (
+                <button
+                  onClick={handleSendOtp}
+                  className="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 rounded"
+                >
+                  Send OTP
+                </button>
+              )}
+
+              {otpSent && !verified && (
+                <div className="space-y-2">
+                  <input
+                    type="text"
+                    placeholder="Enter OTP"
+                    className="w-full p-2 border rounded"
+                    value={otp}
+                    onChange={(e) => setOtp(e.target.value)}
+                  />
+                  <button
+                    onClick={handleVerifyOtp}
+                    className="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-2 rounded"
+                  >
+                    Verify OTP
+                  </button>
+                </div>
+              )}
+
+              {verified && (
+                <button
+                  onClick={handlePlaceOrder}
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded"
+                >
+                  Place Order
+                </button>
+              )}
+            </div>
+          </>
+        )}
+      </div>
+    </div>
+  );
+}

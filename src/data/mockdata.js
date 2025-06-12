@@ -1,7 +1,6 @@
-import {one } from '../../public/menu.svg'
 export const theMenu = [
   { id: 1, name: "Vadapav", price: 25, image: "" },
-  { id: 2, name: "Dryfruits Kharwas", price: 40, image: {one} },
+  { id: 2, name: "Dryfruits Kharwas", price: 40, image: "/vadapav.png" },
   { id: 3, name: "Masala Taak", price: 20, image: "/masalataak.png" },
   { id: 4, name: "Tea", price: 15, image: "/tea.png" },
   { id: 5, name: "Hot Coffee", price: 25, image: "/coffee.png"},

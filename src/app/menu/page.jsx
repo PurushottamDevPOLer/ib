@@ -22,11 +22,18 @@ const MenuPage = () => {
             >
               <div className="h-36 w-full overflow-hidden">
                 <img
-                  src={item.image}
+                  src={item.image || "/profile.svg"}
                   alt={item.name}
                   className="w-full h-full object-cover"
                 />
               </div>
+              {/* <img
+                className="profileImage"
+                src={user.photoURL || "/profile.svg"}
+                alt={user.email}
+              /> */}
+
+
               <div className="p-4 flex flex-col justify-between flex-grow">
                 <div>
                   <h3 className="text-base font-semibold text-gray-900">{item.name}</h3>

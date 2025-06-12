@@ -41,7 +41,7 @@ export default function Header({ initialUser }) {
             <div className="max-w-7xl mx-auto px-4 py-6 text-center">
                 {/* Logo */}
                 <h1 className="text-4xl font-extrabold tracking-tight text-[#D8232A] font-[Montserrat]">
-                    Indian Burger | Vadapav
+                    WHAT A PAV!!
                 </h1>
 
                 {/* Nav Links */}

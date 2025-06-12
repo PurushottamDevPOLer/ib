@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import { getAuthenticatedAppForUser } from "@/lib/firebase/serverApp"; 
 
 export const metadata = {
-  title: "Indian Burger | Vadapav",
+  title: "WHAT A PAV!!",
   description: "Indian burger means vadapav.",
 };
 

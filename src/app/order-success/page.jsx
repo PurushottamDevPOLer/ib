@@ -1,8 +1,8 @@
 import React from "react";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 
 export default function OrderSuccess() {
-  const router = useRouter();
+  // const router = useRouter();
   const orderId = Math.floor(100000 + Math.random() * 900000);
 
   return (
@@ -20,12 +20,12 @@ export default function OrderSuccess() {
         <p className="mt-2 text-sm text-gray-600">Status:</p>
         <p className="text-lg font-semibold text-yellow-600">Preparing</p>
       </div>
-      <button
+      {/* <button
         onClick={() => router.push("/menu")}
         className="bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded-full"
       >
         Back to Menu
-      </button>
+      </button> */}
     </div>
   );
 }

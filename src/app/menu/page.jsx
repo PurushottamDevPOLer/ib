@@ -2,11 +2,7 @@
 
 import React from 'react';
 import {
-  chickenMenu,
-  fishMenu,
-  vegMenu,
-  beveragesMenu,
-  extraMenu,
+  chickenMenu
 } from '@/data/mockdata';
 import { useCartStore } from '@/store/cartStore';
 
@@ -71,26 +67,18 @@ const MenuPage = () => {
       <div className="sticky top-[72px] z-40 bg-white py-3 px-4 shadow-md">
         <div className="mt-2 flex flex-wrap justify-center gap-3 text-sm sm:text-base">
           <a href="#chicken" className="px-3 py-1 rounded-full bg-yellow-100 hover:bg-yellow-200 transition">Chicken</a>
-          <a href="#fish" className="px-3 py-1 rounded-full bg-yellow-100 hover:bg-yellow-200 transition">Fish</a>
-          <a href="#veg" className="px-3 py-1 rounded-full bg-yellow-100 hover:bg-yellow-200 transition">Veg</a>
-          <a href="#beverages" className="px-3 py-1 rounded-full bg-yellow-100 hover:bg-yellow-200 transition">Beverages</a>
-          <a href="#extras" className="px-3 py-1 rounded-full bg-yellow-100 hover:bg-yellow-200 transition">Extras</a>
-        </div>
+       </div>
       </div>
 
       {/* Menu Sections */}
       <main className="max-w-6xl mx-auto px-4 py-8">
         {renderSection('Chicken', chickenMenu, 'chicken')}
-        {renderSection('Fish', fishMenu, 'fish')}
-        {renderSection('Veg', vegMenu, 'veg')}
-        {renderSection('Beverages', beveragesMenu, 'beverages')}
-        {renderSection('Extras', extraMenu, 'extras')}
-      </main>
+       </main>
 
       {/* Footer */}
       <footer className="bg-yellow-50 py-6 mt-10 shadow-inner">
         <div className="max-w-6xl mx-auto text-center text-sm text-gray-500">
-          © 2025 Burger Store. All rights reserved.
+          © 2025 Indian Burger. All rights reserved.
         </div>
       </footer>
 

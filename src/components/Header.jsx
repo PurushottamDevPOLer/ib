@@ -1,12 +1,9 @@
 "use client";
 import React, { useEffect } from "react";
 import Link from "next/link";
-import {
-    signInWithGoogle,
-    signOut,
-    onIdTokenChanged,
-} from "@/src/lib/firebase/auth.js";
-import { addFakeRestaurantsAndReviews } from "@/src/lib/firebase/firestore.js";
+import {signInWithGoogle, signOut,onIdTokenChanged, } from "@/lib/firebase/auth";
+
+// import { addFakeRestaurantsAndReviews } from "@/src/lib/firebase/firestore.js";
 import { setCookie, deleteCookie } from "cookies-next";
 
 function useUserSession(initialUser) {

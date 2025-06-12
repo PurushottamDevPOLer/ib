@@ -7,7 +7,7 @@ export const theMenu = [
   { id: 6, name: "Mocha Frappé", price: 60, image: "https://firebasestorage.googleapis.com/v0/b/indianburger-devpoler.firebasestorage.app/o/mochafrappe.jpg?alt=media&token=eadafd98-42a5-489f-9e67-08948d29a02c" },
   { id: 7, name: "Chocolate Shake", price: 50, image: "https://firebasestorage.googleapis.com/v0/b/indianburger-devpoler.firebasestorage.app/o/chocolateshake.jpg?alt=media&token=f7126939-7180-4e8b-81f6-096b491f934b" },
   { id: 8, name: "Strawberry Shake", price: 90, image: "https://firebasestorage.googleapis.com/v0/b/indianburger-devpoler.firebasestorage.app/o/strawberryshake.jpg?alt=media&token=0ea889bc-37b7-4e95-a0cd-3c841be6ea84" },
-  { id: 9, name: "Virgin Mojito", price: 70, image: "https://firebasestorage.googleapis.com/v0/b/indianburger-devpoler.firebasestorage.app/o/virginmojito.jpg?alt=media&token=ff20bff0-d9ca-43db-866b-2b09f15afe51g" },
+  { id: 9, name: "Virgin Mojito", price: 70, image: "https://firebasestorage.googleapis.com/v0/b/indianburger-devpoler.firebasestorage.app/o/virginmojito.jpg?alt=media&token=d0835285-052c-4f22-88d2-a28cb76da5de" },
   { id: 10, name: "Strawberry Chocolate", price: 130, image: "https://firebasestorage.googleapis.com/v0/b/indianburger-devpoler.firebasestorage.app/o/strawberrychocolate.jpg?alt=media&token=a7c2a26a-8ba4-4acd-9044-cb62874e803c" },
   { id: 11, name: "Water Bottle ", price: 20, image: "https://firebasestorage.googleapis.com/v0/b/indianburger-devpoler.firebasestorage.app/o/waterbottle.jpg?alt=media&token=a755af58-6b6c-435a-aa3d-3036ce3d84f7" },
 ];

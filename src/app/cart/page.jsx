@@ -18,9 +18,13 @@ export default function CartPage() {
     0
   );
 
-  const handlePlaceOrder = () => {
-    alert('Redirecting to payment gateway...');
-  };
+  // const handlePlaceOrder = () => {
+  //   alert('Redirecting to payment gateway...');
+  // };
+
+  // async function pay() {
+
+  // }
 
   return (
     <div className="min-h-screen p-6 bg-gradient-to-br from-yellow-100 to-orange-100">
@@ -63,13 +67,17 @@ export default function CartPage() {
               <p className="text-lg font-bold text-right">Total: ₹{totalAmount}</p>
             </div>
 
-            <div className="mt-6 space-y-4">  
-                <button
+            <div className="mt-6 space-y-4">
+              {/* <button
                   onClick={handlePlaceOrder}
                   className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded"
                 >
                   Place Order
-                </button>  
+                </button>   */}
+              <Link
+                href={'https://rzp.io/rzp/LKytma4'}
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded"
+              >Order on Razorpay</Link>
             </div>
           </>
         )}

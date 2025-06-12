@@ -1,15 +1,13 @@
-
 export const chickenMenu = [
-  { id: 1, name: "Mini Chicken Burger ", price: 80, image: "/image.png" },
-  { id: 2, name: "Jumbo Chicken Burger", price: 140, image: "/image.png" },
-  { id: 3, name: "Fillet Chicken Burger", price: 80, image: "/image.png" },
-  { id: 4, name: "Chicken Hamburger", price: 100, image: "/image.png" },
-  {id: 5, name: "Chicken Steak Burger", price: 120, image: "/image.png"},
-  { id: 6, name: "Chicken Roll", price: 120, image: "/image.png" },
-  { id: 7, name: "Chicken Salami Roll", price: 120, image: "/image.png" },
-  {id: 8, name: "Chicken Hot Dog Roll", price: 120, image: "/image.png"},
-  { id: 9, name: "Chicken Sausage Surprise Roll", price: 120, image: "/image.png" },
-  { id: 10, name: "Chicken Mixed Surprise Roll", price: 140, image: "/image.png" },
-  { id: 11, name: "Chicken Fingers ", price: 100, image: "/image.png" },
-  
+  { id: 1, name: "Vadapav", price: 25, image: "/vadapav.png" },
+  { id: 2, name: "Dryfruits Kharwas", price: 40, image: "/dryfruitskharwas.png" },
+  { id: 3, name: "Masala Taak", price: 20, image: "/masalataak.png" },
+  { id: 4, name: "Tea", price: 15, image: "/tea.png" },
+  { id: 5, name: "Hot Coffee", price: 25, image: "/coffee.png"},
+  { id: 6, name: "Mocha Frappé", price: 60, image: "/mochafrappé.png" },
+  { id: 7, name: "Chocolate Shake", price: 50, image: "/chocolateshake.png" },
+  { id: 8, name: "Strawberry Shake", price: 90, image: "/strawberryshake.png"},
+  { id: 9, name: "Virgin Mojito", price: 70, image: "/virginmojito.png" },
+  { id: 10, name: "Strawberry Chocolate", price: 130, image: "/strawberrychocolate.png" },
+  { id: 11, name: "Water Bottle ", price: 20, image: "/waterbottle.png" },
 ];

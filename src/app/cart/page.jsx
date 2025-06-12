@@ -1,15 +1,10 @@
 'use client';
 
 import { useCartStore } from '@/store/cartStore';
-import { useState } from 'react';
 
 export default function CartPage() {
   const cart = useCartStore((state) => state.cart);
   const updateQuantity = useCartStore((state) => state.updateQuantity);
-  const [phone, setPhone] = useState('');
-  const [otpSent, setOtpSent] = useState(false);
-  const [otp, setOtp] = useState('');
-  const [verified, setVerified] = useState(false);
 
   const handleQuantityChange = (id, delta) => {
     const item = cart.find((i) => i.id === id);
@@ -23,29 +18,7 @@ export default function CartPage() {
     0
   );
 
-  const handleSendOtp = () => {
-    if (phone.length !== 10) {
-      alert('Enter valid 10-digit number');
-      return;
-    }
-    setOtpSent(true);
-    alert(`OTP sent to ${phone} (mocked)`);
-  };
-
-  const handleVerifyOtp = () => {
-    if (otp === '123456') {
-      setVerified(true);
-      alert('OTP Verified!');
-    } else {
-      alert('Invalid OTP');
-    }
-  };
-
   const handlePlaceOrder = () => {
-    if (!verified) {
-      alert('Please verify OTP first');
-      return;
-    }
     alert('Redirecting to payment gateway...');
   };
 
@@ -90,50 +63,13 @@ export default function CartPage() {
               <p className="text-lg font-bold text-right">Total: ₹{totalAmount}</p>
             </div>
 
-            <div className="mt-6 space-y-4">
-              <input
-                type="tel"
-                placeholder="Enter phone number"
-                className="w-full p-2 border rounded"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
-              />
-
-              {!otpSent && (
-                <button
-                  onClick={handleSendOtp}
-                  className="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 rounded"
-                >
-                  Send OTP
-                </button>
-              )}
-
-              {otpSent && !verified && (
-                <div className="space-y-2">
-                  <input
-                    type="text"
-                    placeholder="Enter OTP"
-                    className="w-full p-2 border rounded"
-                    value={otp}
-                    onChange={(e) => setOtp(e.target.value)}
-                  />
-                  <button
-                    onClick={handleVerifyOtp}
-                    className="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-2 rounded"
-                  >
-                    Verify OTP
-                  </button>
-                </div>
-              )}
-
-              {verified && (
+            <div className="mt-6 space-y-4">  
                 <button
                   onClick={handlePlaceOrder}
                   className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded"
                 >
                   Place Order
-                </button>
-              )}
+                </button>  
             </div>
           </>
         )}

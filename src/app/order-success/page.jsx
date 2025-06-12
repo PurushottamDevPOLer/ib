@@ -13,7 +13,7 @@ export default function OrderSuccess() {
         className="w-32 h-32 mb-6"
       />
       <h1 className="text-2xl font-bold text-green-600 mb-2">Order Placed Successfully!</h1>
-      <p className="text-gray-700 mb-4">Thank you for your order. We’re preparing it now 🍔</p>
+      <p className="text-gray-700 mb-4">Thank you for your order. We are preparing it now 🍔</p>
       <div className="bg-gray-100 rounded-lg p-4 w-full max-w-sm text-left mb-6">
         <p className="text-sm text-gray-600">Order ID:</p>
         <p className="text-lg font-semibold text-gray-800">#{orderId}</p>

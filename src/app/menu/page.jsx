@@ -22,7 +22,7 @@ const MenuPage = () => {
             >
               <div className="h-36 w-full overflow-hidden">
                 <img
-                  src={item.image || "/profile.svg"}
+                  src={item.image || "/vadapav.png"}
                   alt={item.name}
                   className="w-full h-full object-cover"
                 />

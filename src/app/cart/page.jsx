@@ -68,17 +68,17 @@ export default function CartPage() {
             </div>
 
             <div className="mt-6 space-y-4">
-              {/* <button
+             <button
                   onClick={handlePlaceOrder}
                   className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded"
                 >
                   Place Order
-                </button>   */}
-              <Link
+                </button>   
+              {/* <Link
                 href={'https://rzp.io/rzp/LKytma4'}
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded"
-              >Order on Razorpay</Link>
-            </div>
+              >Order on Razorpay</Link>*/}
+            </div> 
           </>
         )}
       </div>

@@ -7,6 +7,8 @@ export const metadata = {
   description: "Indian burger means vadapav.",
 };
 
+export const dynamic = "force-dynamic";
+
 export default async function RootLayout({ children }) {
   const { currentUser } = await getAuthenticatedAppForUser();
   return (

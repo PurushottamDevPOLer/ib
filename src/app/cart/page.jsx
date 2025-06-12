@@ -18,9 +18,9 @@ export default function CartPage() {
     0
   );
 
-  // const handlePlaceOrder = () => {
-  //   alert('Redirecting to payment gateway...');
-  // };
+  const handlePlaceOrder = () => {
+    alert('Redirecting to payment gateway...');
+  };
 
   // async function pay() {
 

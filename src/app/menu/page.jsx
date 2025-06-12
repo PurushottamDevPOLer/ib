@@ -48,28 +48,6 @@ const MenuPage = () => {
 
   return (
     <div className="min-h-screen bg-white text-gray-900">
-      {/* Header */}
-      <header className="bg-white shadow-md sticky top-0 z-50">
-        <div className="max-w-6xl mx-auto px-4 py-3">
-          <div className="text-3xl font-extrabold text-yellow-500">Burger Store</div>
-          <nav className="mt-2 text-sm sm:text-base">
-            <ul className="flex flex-wrap gap-5 text-gray-600 font-medium">
-              <li><a href="/" className="hover:text-yellow-500">Home</a></li>
-              <li><a href="/menu" className="hover:text-yellow-500">Menu</a></li>
-              <li><a href="/cart" className="hover:text-yellow-500">Cart</a></li>
-              <li><a href="/contact" className="hover:text-yellow-500">Contact</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
-
-      {/* Category Tabs */}
-      <div className="sticky top-[72px] z-40 bg-white py-3 px-4 shadow-md">
-        <div className="mt-2 flex flex-wrap justify-center gap-3 text-sm sm:text-base">
-          <a href="#chicken" className="px-3 py-1 rounded-full bg-yellow-100 hover:bg-yellow-200 transition">Chicken</a>
-       </div>
-      </div>
-
       {/* Menu Sections */}
       <main className="max-w-6xl mx-auto px-4 py-8">
         {renderSection('Chicken', chickenMenu, 'chicken')}

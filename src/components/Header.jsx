@@ -38,22 +38,20 @@ export default function Header({ initialUser }) {
     };
     return (
         <>
-          
+
             <header className="bg-white shadow-md sticky top-0 z-50">
                 <nav className="max-w-7xl mx-auto px-4 py-6 flex flex-col items-center text-center space-y-3">
                     {/* Brand */}
                     <div>
                         <h1 className="text-4xl font-extrabold text-yellow-500 tracking-wider whitespace-nowrap">
-                            🍔 Burger Store
+                            <Link href="/" className="logo">
+                                <img src="/vercel.svg" alt="Indian Burger | Vadapav" />
+                                🍔 Indian Burger | Vadapav  </Link>
                         </h1>
                     </div>
 
                     {/* Nav Bar */}
                     <nav>
-                        <Link href="/" className="logo">
-                            <img src="/vercel.svg" alt="Indian Burger | Vadapav" />
-                            Indian Burger | Vadapav
-                        </Link>
                         {user ? (
                             <>
                                 <div className="profile">

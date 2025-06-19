@@ -3,6 +3,11 @@
 import BuyProduct from '@/components/razorpay/BuyProduct';
 import { useCartStore } from '@/store/cartStore';
 
+import React, { Suspense } from "react";
+import Buy from "./Buy";
+// import { useRouter } from 'next/navigation';
+import Loading from "@/app/loading";
+
 export default function CartPage() {
   const cart = useCartStore((state) => state.cart);
   const updateQuantity = useCartStore((state) => state.updateQuantity);
@@ -75,7 +80,12 @@ export default function CartPage() {
               >
                 Place Order
               </button>
-              <BuyProduct />
+
+            </div>
+            <div>
+              <Suspense fallback={<Loading />}>
+                <Buy makePayment={makePayment} />
+              </Suspense>
             </div>
           </>
         )}

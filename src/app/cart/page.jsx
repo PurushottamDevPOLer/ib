@@ -4,7 +4,7 @@ import BuyProduct from '@/components/razorpay/BuyProduct';
 import { useCartStore } from '@/store/cartStore';
 
 import React, { Suspense } from "react";
-import Buy from "./Buy";
+import Buy from '@/components/razorpay/Buy';
 // import { useRouter } from 'next/navigation';
 import Loading from "@/app/loading";
 

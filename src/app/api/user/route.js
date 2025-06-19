@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
-import dbConnect from '../../../database/database'
-import User from '../../../database/model/User'
+// import dbConnect from '../../../database/database'
+// import User from '../../../database/model/User'
 
 export async function GET() {
     //   await dbConnect();

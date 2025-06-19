@@ -26,7 +26,7 @@ export async function POST(req, res) {
 
     if (isAuthentic) {
 
-        // console.log(Payment)
+    //    console.log(Payment)
 
         // await dbConnect()
 

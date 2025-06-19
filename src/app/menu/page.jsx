@@ -57,7 +57,7 @@ const MenuPage = () => {
     <div className="min-h-screen bg-white text-gray-900">
       {/* Menu Sections */}
       <main className="max-w-6xl mx-auto px-4 py-8">
-        {renderSection('Chicken', theMenu, 'chicken')}
+        {renderSection('WHAT A MENU', theMenu, 'chicken')}
        </main>
 
       {/* Footer */}

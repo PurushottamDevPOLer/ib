@@ -1,5 +1,6 @@
 'use client';
 
+import BuyProduct from '@/components/razorpay/BuyProduct';
 import { useCartStore } from '@/store/cartStore';
 
 export default function CartPage() {
@@ -68,17 +69,14 @@ export default function CartPage() {
             </div>
 
             <div className="mt-6 space-y-4">
-             <button
-                  onClick={handlePlaceOrder}
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded"
-                >
-                  Place Order
-                </button>   
-              {/* <Link
-                href={'https://rzp.io/rzp/LKytma4'}
+              <button
+                onClick={handlePlaceOrder}
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded"
-              >Order on Razorpay</Link>*/}
-            </div> 
+              >
+                Place Order
+              </button>
+              <BuyProduct />
+            </div>
           </>
         )}
       </div>
